@@ -10,7 +10,7 @@ app.use(express.static("public"));
 const listingCount = db.prepare("SELECT COUNT(*) as count FROM listings").get().count;
 
 if (listingCount === 0) {
-    const listings = require("./listings-data");
+    const listings = require("./listing-data");
     const insert = db.prepare(`
         INSERT INTO listings (name, location, type, price_per_night, description, image_url)
         VALUES (@name, @location, @type, @price_per_night, @description, @image_url)
