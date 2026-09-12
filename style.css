@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #F5EFE3;
+    color: #1A1A1A;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+}
+
+a { color: inherit; }
+
+/* ===== HEADER / HERO ===== */
+header.hero {
+    background:
+        linear-gradient(180deg, rgba(15,46,43,0.55), rgba(15,46,43,0.85)),
+        url('https://picsum.photos/seed/tanzania-hero/1600/700');
+    background-size: cover;
+    background-position: center;
+    color: #F5EFE3;
+    padding: 90px 24px 70px;
+    text-align: center;
+}
+
+header.hero .eyebrow {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #E8871E;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header.hero h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    margin-bottom: 12px;
+}
+
+header.hero p {
+    font-size: 17px;
+    color: #E4DDCB;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Simple header for interior pages (listing/payment) */
+header.simple {
+    background: #0F2E2B;
+    color: #F5EFE3;
+    padding: 24px;
+    text-align: center;
+}
+header.simple h1 { font-size: 24px; }
+header.simple a { text-decoration: none; }
+
+/* ===== FILTER BAR ===== */
+.filter-bar {
+    max-width: 1100px;
+    margin: -34px auto 0;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(15,46,43,0.15);
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.filter-bar select,
+.filter-bar input {
+    flex: 1;
+    min-width: 160px;
+    padding: 10px 12px;
+    border: 1px solid #DCD3BF;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    background: #FBF8F2;
+}
+
+/* ===== MAIN / LISTINGS ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.results-count {
+    font-size: 14px;
+    color: #6B6355;
+    margin-bottom: 18px;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 26px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(15,46,43,0.08);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15,46,43,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 16px;
+    position: relative;
+}
+
+.type-tag {
+    position: absolute;
+    top: -14px;
+    left: 16px;
+    background: #E8871E;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.type-tag.Hotel { background: #146B5C; }
+.type-tag.Lodge { background: #E8871E; }
+.type-tag.Airbnb { background: #A2472B; }
+.type-tag.Guesthouse { background: #5B4B8A; }
+
+.card-body h3 {
+    margin-top: 10px;
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.location {
+    color: #6B6355;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: 600;
+    color: #0F2E2B;
+    font-size: 17px;
+}
+
+/* ===== LISTING DETAIL PAGE ===== */
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 36px;
+}
+
+@media (max-width: 800px) {
+    .detail-layout { grid-template-columns: 1fr; }
+}
+
+#listing-detail img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+#listing-detail h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.booking-box {
+    background: white;
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: 0 2px 10px rgba(15,46,43,0.08);
+    align-self: start;
+}
+
+.booking-box h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.booking-box label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4A4438;
+}
+
+.booking-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DCD3BF;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.booking-box button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 13px;
+    background: #E8871E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.booking-box button:hover { background: #d47814; }
+
+#total-price {
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0F2E2B;
+}
+
+#booking-message {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #146B5C;
+    font-weight: 600;
+}
