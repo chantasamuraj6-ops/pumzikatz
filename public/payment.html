@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PumzikaTZ — Payment</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+<body>
+
+    <header class="simple">
+        <nav class="site-nav">
+            <a href="/" aria-label="PumzikaTZ home">
+                <svg class="logo-mark" viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18,68 C18,45 24,28 34,16" stroke="#FDF3EC" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <path d="M62,68 C62,45 56,28 46,16" stroke="#FDF3EC" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <circle class="logo-sun" cx="40" cy="19" r="8" fill="#FF6B4A"/>
+                    <path d="M25,45 Q40,62 55,45" stroke="#FDF3EC" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M29,46 L35,39 L41,47 L47,39 L51,46" stroke="#FF6B4A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <text x="90" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#FDF3EC">Pumzika<tspan fill="#FF6B4A">TZ</tspan></text>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="booking-box">
+            <h3>Confirm & Pay</h3>
+            <div id="booking-summary">Loading booking...</div>
+            <button id="pay-btn" style="margin-top:20px;">Pay Now</button>
+        </div>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>
