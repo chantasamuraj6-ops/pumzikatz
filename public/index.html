@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PumzikaTZ — Find Your Stay in Tanzania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="eyebrow">HOTELS · LODGES · AIRBNBS</div>
+        <h1>Pumzika popote Tanzania.</h1>
+        <p>Rest anywhere in Tanzania — from Zanzibar's beaches to the Serengeti's plains.</p>
+    </header>
+
+    <div class="filter-bar">
+        <input type="text" id="search-input" placeholder="Search by name or location...">
+        <select id="location-filter">
+            <option value="">All locations</option>
+        </select>
+        <select id="type-filter">
+            <option value="">All types</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Lodge">Lodge</option>
+            <option value="Airbnb">Airbnb</option>
+            <option value="Guesthouse">Guesthouse</option>
+        </select>
+    </div>
+
+    <main>
+        <p class="results-count" id="results-count"></p>
+        <div id="listings" class="listings-grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
